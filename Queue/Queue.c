@@ -1,21 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
+#define MAX_SIZE 10
 
-Enqueue(QUEUE, N, F, R, ITEM)
+typedef struct
 {
-  if(R == N-1)
-  {
-    printf("The queue is overflowed.\.");
-    return;
-  }
-  if(F==-1)
-  {
-    F = 0;
-    R = 0;
-  }
-  else
-  {
-    R = R+1;
-    QUEUE[R] = ITEM;
-  }
+  int arr[MAX_SIZE];
+  int front;
+  int rear;
+} Queue;
+
+void intialize(Queue *q)
+{
+  q->front=-1;
+  q->rear=-1;
 }
